@@ -340,6 +340,8 @@ class TickerBase():
 
         if 'regularMarketOpen' in self._info:
             self._info['regularMarketPrice'] = self._info['regularMarketOpen']
+        else:
+            self._info['regularMarketPrice'] = ''
         self._info['logo_url'] = ""
         try:
             domain = self._info['website'].split(
